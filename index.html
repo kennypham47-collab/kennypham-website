@@ -4,145 +4,192 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kenny Pham | Official Website</title>
-  <meta name="description" content="Official website for Kenny Pham — melodic bass, future bass, and EDM artist from Salt Lake City, Utah." />
-  <meta name="theme-color" content="#0b0b12" />
+  <meta name="description" content="Official website for Kenny Pham, electronic music artist from Salt Lake City, Utah." />
+  <meta name="theme-color" content="#05060b" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
+  <div class="intro-overlay" id="introOverlay" aria-hidden="true">
+    <img src="assets/AVS_KP_WHITE_MAIN.png" alt="" class="intro-logo" />
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero-bg">
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image:url('assets/43964FCA-FDA0-4730-9DFA-08B4B765387A.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/4F4E2E98-482D-44C4-A74D-F3B42AAC569D.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/F4D2FAB9-D38A-4640-9921-3724A20B47EF.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/DSC04197.jpg')"></div>
+      </div>
+      <div class="hero-vignette"></div>
+      <div class="hero-glow hero-glow-left"></div>
+      <div class="hero-glow hero-glow-right"></div>
+    </div>
+
     <nav class="nav container">
-      <a class="brand" href="#">
-        <img src="assets/AVS_KP_WHITE_HORIZ.png" alt="Kenny Pham logo" />
+      <a href="#top" class="brand">
+        <img src="assets/AVS_KP_WHITE_HORIZ.png" alt="Kenny Pham" />
       </a>
+
       <div class="nav-links">
-        <a href="#music">Music</a>
-        <a href="#shows">Shows</a>
+        <a href="#releases">Releases</a>
         <a href="#about">About</a>
-        <a href="#socials">Contact</a>
+        <a href="#spotify">Spotify</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#socials">Connect</a>
       </div>
     </nav>
 
-    <div class="hero-inner container">
+    <div class="hero-content container">
       <div class="hero-copy">
+        <p class="eyebrow">Official Artist Website</p>
         <h1>Kenny Pham</h1>
-        <p>
-          Emotional melodies, cinematic builds, and heavy drops from Salt Lake City, Utah.
-          Kenny Pham blends atmosphere and impact into a live experience built for both the heart and the rail.
+        <p class="hero-text">
+          Electronic music artist from Salt Lake City, Utah.
         </p>
         <div class="hero-buttons">
-          <a class="btn btn-primary" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Listen Now</a>
-          <a class="btn btn-secondary" href="#shows">Upcoming Shows</a>
+          <a class="btn btn-primary" href="#releases">New Releases</a>
+          <a class="btn btn-secondary" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open Spotify</a>
         </div>
       </div>
 
-      <div class="hero-media glass">
-        <div class="slideshow">
-          <img src="assets/DSC04197.jpg" alt="Kenny Pham performing live" class="slide active" />
-          <img src="assets/DSC04197.jpg" alt="Kenny Pham live crowd shot" class="slide" />
-          <img src="assets/DSC04197.jpg" alt="Kenny Pham on stage" class="slide" />
+      <div class="hero-side glass">
+        <div class="hero-side-top">
+          <img src="assets/KP_SHORT_LOGO_WHITE.png" alt="KP logo" class="hero-kp" />
+          <span class="live-pill">Featured Release</span>
         </div>
-        <div class="hero-logo-badge">
-          <img src="assets/KP_SHORT_LOGO_WHITE.png" alt="KP monogram" />
+        <div class="hero-side-copy">
+          <h2>Take This Pain</h2>
+          <p>Now highlighted on the homepage.</p>
+          <a class="text-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Stream on Spotify</a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="music" class="section container">
+    <section id="releases" class="section container">
       <div class="section-head">
         <div>
-          <p class="eyebrow cyan">Music</p>
-          <h2>Latest releases</h2>
+          <p class="eyebrow cyan">Featured</p>
+          <h2>Latest music</h2>
         </div>
       </div>
 
-      <div class="cards three-col">
-        <article class="card glass">
-          <div class="cover cover-1"></div>
-          <div class="card-top">
-            <h3>Don't Let Me Go</h3>
-            <span class="tag">Single</span>
+      <div class="featured-release glass">
+        <div class="featured-art">
+          <img src="assets/AVS_KP_WHITE_MAIN.png" alt="Kenny Pham logo art" />
+        </div>
+        <div class="featured-copy">
+          <p class="eyebrow pink">Spotlight</p>
+          <h3>Take This Pain</h3>
+          <p class="body-copy">
+            Front and center so new listeners land on your newest release first.
+          </p>
+          <div class="hero-buttons small-gap">
+            <a class="btn btn-primary" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Listen</a>
+            <a class="btn btn-secondary" href="#spotify">Open player</a>
           </div>
-          <p class="muted"><a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Listen on Spotify</a></p>
-        </article>
+        </div>
+      </div>
 
-        <article class="card glass">
-          <div class="cover cover-2"></div>
-          <div class="card-top">
-            <h3>Away From Here</h3>
-            <span class="tag">Single</span>
-          </div>
-          <p class="muted"><a href="https://soundcloud.com/kennyphamm" target="_blank" rel="noopener noreferrer">Stream on SoundCloud</a></p>
+      <div class="release-grid">
+        <article class="release-card glass release-feature">
+          <p class="eyebrow cyan">Newest</p>
+          <h3>Take This Pain</h3>
+          <p class="muted">Featured single</p>
         </article>
-
-        <article class="card glass">
-          <div class="cover cover-3"></div>
-          <div class="card-top">
-            <h3>Crawling Out</h3>
-            <span class="tag">Single</span>
-          </div>
-          <p class="muted"><a href="https://www.youtube.com/channel/UC_1RoUaR39nrhJGB8STGCFw" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        <article class="release-card glass">
+          <p class="eyebrow cyan">Recent</p>
+          <h3>Meet Again</h3>
+          <p class="muted">Single</p>
+        </article>
+        <article class="release-card glass">
+          <p class="eyebrow cyan">Recent</p>
+          <h3>Mess</h3>
+          <p class="muted">Single</p>
+        </article>
+        <article class="release-card glass">
+          <p class="eyebrow cyan">Recent</p>
+          <h3>Too Loud</h3>
+          <p class="muted">Single</p>
+        </article>
+        <article class="release-card glass">
+          <p class="eyebrow cyan">Recent</p>
+          <h3>YOU</h3>
+          <p class="muted">Single</p>
+        </article>
+        <article class="release-card glass">
+          <p class="eyebrow cyan">Recent</p>
+          <h3>Monster</h3>
+          <p class="muted">Single</p>
         </article>
       </div>
     </section>
 
-    <section id="shows" class="section section-alt">
-      <div class="container">
-        <p class="eyebrow pink">Shows</p>
-        <h2>Upcoming appearances</h2>
-
-        <div class="show-list">
-          <div class="show glass">
-            <div>
-              <h3>Next Show TBA</h3>
-              <p class="muted">Salt Lake City, Utah</p>
-            </div>
-            <a href="#socials">Book Kenny →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section container">
-      <div class="about-grid">
-        <div class="glass about-main">
+    <section id="about" class="section section-alt">
+      <div class="container about-wrap">
+        <div class="about-card glass">
           <p class="eyebrow cyan">About</p>
-          <h2>Built for emotion and impact</h2>
-          <p class="muted body-copy">
-            Kenny Pham is a melodic bass artist from Salt Lake City, Utah, creating music that
-            fuses uplifting emotion with festival-sized energy. From soaring intros to explosive
-            drops, each record is designed to connect deeply while hitting hard live.
-          </p>
-          <p class="muted body-copy">
-            With releases including <em>Don't Let Me Go</em>, <em>Away From Here</em>, and
-            <em>Crawling Out</em>, Kenny continues building a sound that feels cinematic,
-            personal, and powerful.
+          <h2>Kenny Pham</h2>
+          <p class="body-copy">
+            Kenny Pham is an electronic music producer based in Salt Lake City, Utah.
           </p>
         </div>
 
-        <div class="about-side">
-          <div class="glass stat-box center-logo">
-            <img src="assets/AVS_KP_WHITE_MAIN.png" alt="Kenny Pham phoenix logo" />
-          </div>
-          <div class="glass stat-box">
-            <p class="eyebrow pink">Sound</p>
-            <h3>Melodic Bass / Future Bass / EDM</h3>
-          </div>
+        <div class="about-card glass image-card portrait-card">
+          <img src="assets/019164FB-0757-42CE-87EC-83606D4D6D50.jpeg" alt="Portrait of Kenny Pham" />
         </div>
       </div>
     </section>
 
-    <section id="socials" class="section container">
-      <div class="glass social-box">
+    <section id="spotify" class="section container">
+      <div class="section-head">
         <div>
-          <p class="eyebrow cyan">Connect</p>
-          <h2>Find Kenny online</h2>
+          <p class="eyebrow pink">Spotify</p>
+          <h2>Embedded player</h2>
         </div>
+      </div>
 
+      <div class="spotify-shell glass">
+        <iframe
+          style="border-radius:20px"
+          src="https://open.spotify.com/embed/artist/4nglMpixFbhz13AReyUCaa?utm_source=generator&theme=0"
+          width="100%"
+          height="380"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow cyan">Gallery</p>
+          <h2>Live moments</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-tall glass"><img src="assets/DSC04197.jpg" alt="Kenny Pham live crowd photo" /></div>
+        <div class="gallery-wide glass"><img src="assets/43964FCA-FDA0-4730-9DFA-08B4B765387A.jpeg" alt="Kenny Pham live set with blue lights" /></div>
+        <div class="gallery-wide glass"><img src="assets/4F4E2E98-482D-44C4-A74D-F3B42AAC569D.jpeg" alt="Kenny Pham on stage from behind" /></div>
+        <div class="gallery-tall glass"><img src="assets/019164FB-0757-42CE-87EC-83606D4D6D50.jpeg" alt="Kenny Pham portrait" /></div>
+        <div class="gallery-wide glass"><img src="assets/F4D2FAB9-D38A-4640-9921-3724A20B47EF.jpeg" alt="Kenny Pham crowd with bright stage lights" /></div>
+        <div class="gallery-wide glass"><img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Kenny Pham seated portrait" /></div>
+      </div>
+    </section>
+
+    <section id="socials" class="section container socials-wrap">
+      <div class="social-box glass">
+        <p class="eyebrow cyan">Connect</p>
+        <h2>Find Kenny online</h2>
         <div class="social-links">
           <a href="https://www.instagram.com/kennyphammmmm/" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Spotify</a>
@@ -154,14 +201,19 @@
   </main>
 
   <script>
-    const slides = document.querySelectorAll('.slide');
-    let current = 0;
-    if (slides.length > 1) {
+    window.addEventListener('load', () => {
+      const intro = document.getElementById('introOverlay');
+      setTimeout(() => intro.classList.add('hide'), 900);
+    });
+
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    let heroIndex = 0;
+    if (heroSlides.length > 1) {
       setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-      }, 2800);
+        heroSlides[heroIndex].classList.remove('active');
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        heroSlides[heroIndex].classList.add('active');
+      }, 3600);
     }
   </script>
 </body>
