@@ -230,7 +230,6 @@ button { font: inherit; border: 0; padding: 0; background: none; cursor: pointer
   }
 }
 
-
 .update-card .bit-widget-initializer {
   display: block;
   margin-top: 16px;
@@ -238,7 +237,6 @@ button { font: inherit; border: 0; padding: 0; background: none; cursor: pointer
 .widget-note {
   margin-top: 14px;
 }
-
 
 .hero-show-highlight {
   margin-top: 18px;
@@ -256,7 +254,6 @@ button { font: inherit; border: 0; padding: 0; background: none; cursor: pointer
 .hidden {
   display: none;
 }
-
 
 @media (max-width: 1100px) {
   }
