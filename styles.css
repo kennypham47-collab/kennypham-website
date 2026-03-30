@@ -214,3 +214,45 @@ button { font: inherit; border: 0; padding: 0; background: none; cursor: pointer
   .brand img { height: 34px; }
   .gallery-slides { min-height: 420px; }
 }
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.update-card {
+  border-radius: 30px;
+  padding: 28px;
+}
+@media (max-width: 700px) {
+  .updates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.update-card .bit-widget-initializer {
+  display: block;
+  margin-top: 16px;
+}
+.widget-note {
+  margin-top: 14px;
+}
+
+
+.hero-show-highlight {
+  margin-top: 18px;
+  max-width: 560px;
+  border-radius: 24px;
+  padding: 20px;
+}
+.hero-show-highlight h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+.hero-show-highlight .btn {
+  margin-top: 14px;
+}
+.hidden {
+  display: none;
+}
