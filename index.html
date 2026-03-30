@@ -59,6 +59,7 @@
       </a>
       <div class="nav-links">
         <a href="#featured">Featured</a>
+        <a href="#fan-club">Fan Club</a>
         <a href="#spotify">Spotify</a>
         <a href="#updates">Shows</a>
         <a href="#gallery">Gallery</a>
@@ -153,6 +154,23 @@
       </div>
     </section>
 
+
+    <section id="fan-club" class="section container">
+      <div class="email-capture glass">
+        <div class="email-copy">
+          <p class="eyebrow cyan">Fan Club</p>
+          <h2>Get early access to new music & shows</h2>
+          <p class="body-copy">Get early access to new music, unreleased tracks, and show announcements.<br>No spam. Just music.</p>
+        </div>
+        <form class="email-form" action="#" method="post" onsubmit="handleEmailSubmit(event)">
+          <input type="email" id="fanEmail" name="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="email-note" id="emailNote">Connect this form to ConvertKit, Mailchimp, or Beehiiv when you’re ready.</p>
+      </div>
+    </section>
+
+
     <section id="spotify" class="section section-alt">
       <div class="container spotify-layout">
         <div class="spotify-copy">
@@ -173,6 +191,19 @@
           </iframe>
         </div>
       </div>
+
+      <div class="email-capture glass spotify-capture">
+        <div class="email-copy">
+          <p class="eyebrow pink">Stay Connected</p>
+          <h2>Like what you hear?</h2>
+          <p class="body-copy">Join for unreleased music, early drops, and show updates.</p>
+        </div>
+        <form class="email-form" action="#" method="post" onsubmit="handleEmailSubmit(event)">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+      </div>
+
     </section>
 
     <section id="gallery" class="section container">
@@ -473,6 +504,19 @@
   </script>
 
   <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+
+  <script>
+    function handleEmailSubmit(event) {
+      event.preventDefault();
+      const note = document.getElementById('emailNote');
+      if (note) {
+        note.textContent = 'Email capture UI added. Connect this form to your email platform to start collecting subscribers.';
+      }
+      const form = event.target;
+      form.reset();
+    }
+  </script>
 </body>
+
 
 </html>
