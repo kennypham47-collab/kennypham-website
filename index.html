@@ -59,8 +59,7 @@
       </a>
       <div class="nav-links">
         <a href="#featured">Featured</a>
-        <a href="#fan-club">Fan Club</a>
-        <a href="#spotify">Spotify</a>
+        <a <a href="#spotify">Spotify</a>
         <a href="#updates">Shows</a>
         <a href="#gallery">Gallery</a>
         <a href="#updates">Updates</a>
@@ -113,60 +112,26 @@
       <div class="featured-panel glass">
         <div class="featured-left">
           <p class="eyebrow pink">Now Playing</p>
-          <h2>Take This Pain</h2>
+          <h2 id="featuredReleaseTitle">Take This Pain</h2>
           <div class="hero-actions compact">
-            <a class="btn btn-primary spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Listen Now</a>
+            <a class="btn btn-primary spotify-link" id="featuredReleaseButton" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Listen Now</a>
             <a class="btn btn-secondary" href="#spotify">Open Player</a>
           </div>
         </div>
         <div class="featured-right">
           <div class="featured-cover-frame">
-            <img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Take This Pain cover art placeholder" />
+            <img id="featuredReleaseCover" src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Release cover art" />
           </div>
         </div>
       </div>
 
-      <div class="track-grid">
+      <div class="track-grid" id="trackGrid">
         <article class="track-card glass track-card-feature">
-          <div class="track-art"><img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Take This Pain artwork placeholder"></div>
+          <div class="track-art"><img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Release artwork"></div>
           <p class="eyebrow cyan">Newest</p>
           <h3>Take This Pain</h3>
           <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
         </article>
-        <article class="track-card glass">
-          <div class="track-art"><img src="assets/AVS_KP_WHITE_MAIN.png" alt="Meet Again artwork placeholder"></div>
-          <p class="eyebrow cyan">Release</p>
-          <h3>Meet Again</h3>
-          <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
-        </article>
-        <article class="track-card glass">
-          <div class="track-art"><img src="assets/AVS_KP_WHITE_MAIN.png" alt="Mess artwork placeholder"></div>
-          <p class="eyebrow cyan">Release</p>
-          <h3>Mess</h3>
-          <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
-        </article>
-        <article class="track-card glass">
-          <div class="track-art"><img src="assets/AVS_KP_WHITE_MAIN.png" alt="Too Loud artwork placeholder"></div>
-          <p class="eyebrow cyan">Release</p>
-          <h3>Too Loud</h3>
-          <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
-        </article>
-      </div>
-    </section>
-
-
-    <section id="fan-club" class="section container">
-      <div class="email-capture glass">
-        <div class="email-copy">
-          <p class="eyebrow cyan">Fan Club</p>
-          <h2>Get early access to new music & shows</h2>
-          <p class="body-copy">Get early access to new music, unreleased tracks, and show announcements.<br>No spam. Just music.</p>
-        </div>
-        <form class="email-form" action="#" method="post" onsubmit="handleEmailSubmit(event)">
-          <input type="email" id="fanEmail" name="email" placeholder="Enter your email" required />
-          <button type="submit" class="btn btn-primary">Join</button>
-        </form>
-        <p class="email-note" id="emailNote">Connect this form to ConvertKit, Mailchimp, or Beehiiv when you’re ready.</p>
       </div>
     </section>
 
@@ -192,13 +157,7 @@
         </div>
       </div>
 
-      <div class="email-capture glass spotify-capture">
-        <div class="email-copy">
-          <p class="eyebrow pink">Stay Connected</p>
-          <h2>Like what you hear?</h2>
-          <p class="body-copy">Join for unreleased music, early drops, and show updates.</p>
-        </div>
-        <form class="email-form" action="#" method="post" onsubmit="handleEmailSubmit(event)">
+      <form class="email-form" action="#" method="post" onsubmit="handleEmailSubmit(event)">
           <input type="email" name="email" placeholder="Enter your email" required />
           <button type="submit" class="btn btn-primary">Join</button>
         </form>
@@ -505,18 +464,67 @@
 
   <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
 
+  
+
   <script>
-    function handleEmailSubmit(event) {
-      event.preventDefault();
-      const note = document.getElementById('emailNote');
-      if (note) {
-        note.textContent = 'Email capture UI added. Connect this form to your email platform to start collecting subscribers.';
+    /*
+      NEWEST RELEASE SYSTEM
+      Update only this object when you want the site to visually switch to a new song.
+      Full automatic sync from Spotify would need a backend/API token, so this keeps updates fast and simple.
+
+      Example:
+      title: "Your New Song"
+      spotifyUrl: "https://open.spotify.com/track/EXACT_TRACK_URL"
+      cover: "assets/your-cover-file.jpg"
+
+      Optional: add/remove items in recentReleases below.
+    */
+    const NEWEST_RELEASE = {
+      title: "Take This Pain",
+      spotifyUrl: "https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa",
+      cover: "assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png"
+    };
+
+    const RECENT_RELEASES = [
+      { title: "Take This Pain", spotifyUrl: "https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa", cover: "assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png", label: "Newest" },
+      { title: "Meet Again", spotifyUrl: "https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa", cover: "assets/AVS_KP_WHITE_MAIN.png", label: "Release" },
+      { title: "Mess", spotifyUrl: "https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa", cover: "assets/AVS_KP_WHITE_MAIN.png", label: "Release" },
+      { title: "Too Loud", spotifyUrl: "https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa", cover: "assets/AVS_KP_WHITE_MAIN.png", label: "Release" }
+    ];
+
+    function applyReleaseSystem() {
+      const heroTitle = document.getElementById('heroReleaseTitle');
+      const heroLink = document.getElementById('heroReleaseLink');
+      const heroCover = document.getElementById('heroReleaseCover');
+      const featuredTitle = document.getElementById('featuredReleaseTitle');
+      const featuredButton = document.getElementById('featuredReleaseButton');
+      const featuredCover = document.getElementById('featuredReleaseCover');
+      const grid = document.getElementById('trackGrid');
+
+      if (heroTitle) heroTitle.textContent = NEWEST_RELEASE.title;
+      if (heroLink) heroLink.href = NEWEST_RELEASE.spotifyUrl;
+      if (heroCover) heroCover.src = NEWEST_RELEASE.cover;
+
+      if (featuredTitle) featuredTitle.textContent = NEWEST_RELEASE.title;
+      if (featuredButton) featuredButton.href = NEWEST_RELEASE.spotifyUrl;
+      if (featuredCover) featuredCover.src = NEWEST_RELEASE.cover;
+
+      if (grid) {
+        grid.innerHTML = RECENT_RELEASES.map((track, idx) => `
+          <article class="track-card glass ${idx === 0 ? 'track-card-feature' : ''}">
+            <div class="track-art"><img src="${track.cover}" alt="${track.title} artwork"></div>
+            <p class="eyebrow cyan">${track.label || 'Release'}</p>
+            <h3>${track.title}</h3>
+            <a class="spotify-link" href="${track.spotifyUrl}" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
+          </article>
+        `).join('');
       }
-      const form = event.target;
-      form.reset();
     }
+
+    applyReleaseSystem();
   </script>
 </body>
+
 
 
 </html>
