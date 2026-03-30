@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '912570121617717');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=912570121617717&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kenny Pham | Official Website</title>
   <meta name="description" content="Official website for Kenny Pham from Salt Lake City, Utah." />
   <meta name="theme-color" content="#05060b" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '912570121617717');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Meta Pixel Noscript -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=912570121617717&ev=PageView&noscript=1"
+      alt="" />
+  </noscript>
+
   <div class="intro-overlay" id="introOverlay" aria-hidden="true">
     <img src="assets/AVS_KP_WHITE_MAIN.png" alt="" class="intro-logo" />
   </div>
 
   <header class="hero" id="top">
     <div class="hero-bg">
-      <div class="hero-image"></div>
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image:url('assets/43964FCA-FDA0-4730-9DFA-08B4B765387A.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/4F4E2E98-482D-44C4-A74D-F3B42AAC569D.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/F4D2FAB9-D38A-4640-9921-3724A20B47EF.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/DSC04197.jpg')"></div>
+      </div>
       <div class="hero-vignette"></div>
       <div class="hero-glow hero-glow-left"></div>
       <div class="hero-glow hero-glow-right"></div>
+      <div class="hero-grid"></div>
     </div>
 
     <nav class="nav container">
@@ -46,11 +58,10 @@ src="https://www.facebook.com/tr?id=912570121617717&ev=PageView&noscript=1"
         <img src="assets/AVS_KP_WHITE_HORIZ.png" alt="Kenny Pham" />
       </a>
       <div class="nav-links">
-        <a href="#releases">Releases</a>
-        <a href="#about">About</a>
+        <a href="#featured">Featured</a>
         <a href="#spotify">Spotify</a>
         <a href="#gallery">Gallery</a>
-        <a href="#socials">Connect</a>
+        <a href="#about">About</a>
       </div>
     </nav>
 
@@ -59,119 +70,98 @@ src="https://www.facebook.com/tr?id=912570121617717&ev=PageView&noscript=1"
         <p class="eyebrow">Official Artist Website</p>
         <h1>Kenny Pham</h1>
         <p class="hero-text">Salt Lake City, Utah</p>
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="#releases">New Releases</a>
-          <a class="btn btn-secondary" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open Spotify</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Play on Spotify</a>
+          <a class="btn btn-secondary" href="#featured">Latest Release</a>
         </div>
       </div>
 
-      <div class="hero-side glass">
-        <div class="hero-side-top">
+      <div class="hero-feature glass">
+        <div class="hero-feature-top">
+          <span class="release-chip">New Release</span>
           <img src="assets/KP_SHORT_LOGO_WHITE.png" alt="KP logo" class="hero-kp" />
-          <span class="live-pill">Featured Release</span>
         </div>
-        <div class="hero-side-copy">
-          <h2>Take This Pain</h2>
-          <p>Now highlighted on the homepage.</p>
-          <a class="text-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Stream on Spotify</a>
+        <div class="cover-box">
+          <img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Take This Pain cover art placeholder" />
         </div>
+        <h2>Take This Pain</h2>
+        <a class="text-link spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="releases" class="section container">
+    <section id="featured" class="section container">
       <div class="section-head">
         <div>
-          <p class="eyebrow cyan">Featured</p>
-          <h2>Latest music</h2>
+          <p class="eyebrow cyan">Spotlight</p>
+          <h2>Featured release</h2>
         </div>
       </div>
 
-      <div class="featured-release glass">
-        <div class="featured-art">
-          <img src="assets/AVS_KP_WHITE_MAIN.png" alt="Kenny Pham logo art" />
+      <div class="featured-panel glass">
+        <div class="featured-left">
+          <p class="eyebrow pink">Now Playing</p>
+          <h2>Take This Pain</h2>
+          <div class="hero-actions compact">
+            <a class="btn btn-primary spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Listen Now</a>
+            <a class="btn btn-secondary" href="#spotify">Open Player</a>
+          </div>
         </div>
-        <div class="featured-copy">
-          <p class="eyebrow pink">Spotlight</p>
-          <h3>Take This Pain</h3>
-          <p class="body-copy">
-            Front and center so new listeners land on your newest release first.
-          </p>
-          <div class="hero-buttons small-gap">
-            <a class="btn btn-primary" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
-            <a class="btn btn-secondary" href="#spotify">Open player</a>
+        <div class="featured-right">
+          <div class="featured-cover-frame">
+            <img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Take This Pain cover art placeholder" />
           </div>
         </div>
       </div>
 
-      <div class="release-grid">
-        <article class="release-card glass release-feature">
+      <div class="track-grid">
+        <article class="track-card glass track-card-feature">
+          <div class="track-art"><img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Take This Pain artwork placeholder"></div>
           <p class="eyebrow cyan">Newest</p>
           <h3>Take This Pain</h3>
-          <p class="muted"><a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a></p>
+          <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
         </article>
-        <article class="release-card glass">
-          <p class="eyebrow cyan">Recent</p>
+        <article class="track-card glass">
+          <div class="track-art"><img src="assets/AVS_KP_WHITE_MAIN.png" alt="Meet Again artwork placeholder"></div>
+          <p class="eyebrow cyan">Release</p>
           <h3>Meet Again</h3>
-          <p class="muted"><a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a></p>
+          <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
         </article>
-        <article class="release-card glass">
-          <p class="eyebrow cyan">Recent</p>
+        <article class="track-card glass">
+          <div class="track-art"><img src="assets/AVS_KP_WHITE_MAIN.png" alt="Mess artwork placeholder"></div>
+          <p class="eyebrow cyan">Release</p>
           <h3>Mess</h3>
-          <p class="muted"><a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a></p>
+          <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
         </article>
-        <article class="release-card glass">
-          <p class="eyebrow cyan">Recent</p>
+        <article class="track-card glass">
+          <div class="track-art"><img src="assets/AVS_KP_WHITE_MAIN.png" alt="Too Loud artwork placeholder"></div>
+          <p class="eyebrow cyan">Release</p>
           <h3>Too Loud</h3>
-          <p class="muted"><a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a></p>
-        </article>
-        <article class="release-card glass">
-          <p class="eyebrow cyan">Recent</p>
-          <h3>YOU</h3>
-          <p class="muted"><a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a></p>
-        </article>
-        <article class="release-card glass">
-          <p class="eyebrow cyan">Recent</p>
-          <h3>Monster</h3>
-          <p class="muted"><a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a></p>
+          <a class="spotify-link" href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Open on Spotify</a>
         </article>
       </div>
     </section>
 
-    <section id="about" class="section section-alt">
-      <div class="container about-wrap">
-        <div class="about-card glass">
-          <p class="eyebrow cyan">About</p>
-          <h2>Kenny Pham</h2>
-          <p class="body-copy">Kenny Pham is from Salt Lake City, Utah.</p>
-        </div>
-
-        <div class="about-card glass image-card portrait-card">
-          <img src="assets/019164FB-0757-42CE-87EC-83606D4D6D50.jpeg" alt="Portrait of Kenny Pham" />
-        </div>
-      </div>
-    </section>
-
-    <section id="spotify" class="section container">
-      <div class="section-head">
-        <div>
+    <section id="spotify" class="section section-alt">
+      <div class="container spotify-layout">
+        <div class="spotify-copy">
           <p class="eyebrow pink">Spotify</p>
-          <h2>Embedded player</h2>
+          <h2>Listen now</h2>
+          <p class="body-copy">Stream Kenny Pham directly from the official Spotify player.</p>
         </div>
-      </div>
-
-      <div class="spotify-shell glass">
-        <iframe
-          style="border-radius:20px"
-          src="https://open.spotify.com/embed/artist/4nglMpixFbhz13AReyUCaa?utm_source=generator&theme=0"
-          width="100%"
-          height="380"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
+        <div class="spotify-shell glass">
+          <iframe
+            style="border-radius:20px"
+            src="https://open.spotify.com/embed/artist/4nglMpixFbhz13AReyUCaa?utm_source=generator&theme=0"
+            width="100%"
+            height="420"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
       </div>
     </section>
 
@@ -183,28 +173,47 @@ src="https://www.facebook.com/tr?id=912570121617717&ev=PageView&noscript=1"
         </div>
       </div>
 
-      <div class="slideshow-shell glass">
-        <div class="gallery-slides">
-          <img class="gallery-slide active" src="assets/43964FCA-FDA0-4730-9DFA-08B4B765387A.jpeg" alt="Kenny Pham live set with blue lights" />
-          <img class="gallery-slide" src="assets/4F4E2E98-482D-44C4-A74D-F3B42AAC569D.jpeg" alt="Kenny Pham on stage from behind" />
-          <img class="gallery-slide" src="assets/F4D2FAB9-D38A-4640-9921-3724A20B47EF.jpeg" alt="Kenny Pham crowd with bright stage lights" />
-          <img class="gallery-slide" src="assets/DSC04197.jpg" alt="Kenny Pham live crowd photo" />
-          <img class="gallery-slide" src="assets/019164FB-0757-42CE-87EC-83606D4D6D50.jpeg" alt="Portrait of Kenny Pham" />
-          <img class="gallery-slide" src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Kenny Pham seated portrait" />
+      <div class="gallery-wrap">
+        <div class="gallery-main glass">
+          <div class="gallery-slides">
+            <img class="gallery-slide active" src="assets/43964FCA-FDA0-4730-9DFA-08B4B765387A.jpeg" alt="Kenny Pham live set with blue lights" />
+            <img class="gallery-slide" src="assets/4F4E2E98-482D-44C4-A74D-F3B42AAC569D.jpeg" alt="Kenny Pham on stage from behind" />
+            <img class="gallery-slide" src="assets/F4D2FAB9-D38A-4640-9921-3724A20B47EF.jpeg" alt="Kenny Pham crowd with bright stage lights" />
+            <img class="gallery-slide" src="assets/DSC04197.jpg" alt="Kenny Pham live crowd photo" />
+            <img class="gallery-slide" src="assets/019164FB-0757-42CE-87EC-83606D4D6D50.jpeg" alt="Portrait of Kenny Pham" />
+            <img class="gallery-slide" src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt="Kenny Pham seated portrait" />
+          </div>
+          <div class="slide-dots" id="slideDots"></div>
         </div>
-        <div class="slide-dots" id="slideDots"></div>
+
+        <div class="thumb-grid">
+          <button class="thumb glass active" data-index="0"><img src="assets/43964FCA-FDA0-4730-9DFA-08B4B765387A.jpeg" alt=""></button>
+          <button class="thumb glass" data-index="1"><img src="assets/4F4E2E98-482D-44C4-A74D-F3B42AAC569D.jpeg" alt=""></button>
+          <button class="thumb glass" data-index="2"><img src="assets/F4D2FAB9-D38A-4640-9921-3724A20B47EF.jpeg" alt=""></button>
+          <button class="thumb glass" data-index="3"><img src="assets/DSC04197.jpg" alt=""></button>
+          <button class="thumb glass" data-index="4"><img src="assets/019164FB-0757-42CE-87EC-83606D4D6D50.jpeg" alt=""></button>
+          <button class="thumb glass" data-index="5"><img src="assets/0BAE7F8D-3A32-482E-AD80-1B0F8EDBC409.png" alt=""></button>
+        </div>
       </div>
     </section>
 
-    <section id="socials" class="section container socials-wrap">
+    <section id="about" class="section container">
+      <div class="about-minimal glass">
+        <p class="eyebrow cyan">About</p>
+        <h2>Kenny Pham</h2>
+        <p class="body-copy">Kenny Pham is from Salt Lake City, Utah.</p>
+      </div>
+    </section>
+
+    <section class="section container socials-wrap">
       <div class="social-box glass">
         <p class="eyebrow cyan">Connect</p>
         <h2>Find Kenny online</h2>
         <div class="social-links">
           <a href="https://www.instagram.com/kennyphammmmm/" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Spotify</a>
-          <a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Latest Music</a>
-          <a href="https://open.spotify.com/artist/4nglMpixFbhz13AReyUCaa" target="_blank" rel="noopener noreferrer">Artist Page</a>
+          <a href="https://soundcloud.com/kennyphamm" target="_blank" rel="noopener noreferrer">SoundCloud</a>
+          <a href="https://www.youtube.com/channel/UC_1RoUaR39nrhJGB8STGCFw" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
       </div>
     </section>
@@ -216,15 +225,45 @@ src="https://www.facebook.com/tr?id=912570121617717&ev=PageView&noscript=1"
       setTimeout(() => intro.classList.add('hide'), 900);
     });
 
+    // Meta Pixel reliability helpers
+    function trackMetaEvent(name, params) {
+      try {
+        if (typeof fbq === 'function') {
+          fbq('track', name, params || {});
+        }
+      } catch (e) {}
+    }
+
+    document.querySelectorAll('.spotify-link').forEach((link) => {
+      link.addEventListener('click', () => trackMetaEvent('ViewContent', {content_name: 'Spotify Click'}));
+    });
+
+    // Hero slideshow
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    let heroIndex = 0;
+    if (heroSlides.length > 1) {
+      setInterval(() => {
+        heroSlides[heroIndex].classList.remove('active');
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        heroSlides[heroIndex].classList.add('active');
+      }, 3800);
+    }
+
+    // Gallery slideshow
     const slides = document.querySelectorAll('.gallery-slide');
+    const thumbs = document.querySelectorAll('.thumb');
     const dotsWrap = document.getElementById('slideDots');
     let slideIndex = 0;
+    let slideTimer = null;
 
     slides.forEach((_, idx) => {
       const dot = document.createElement('button');
       dot.className = 'dot' + (idx === 0 ? ' active' : '');
       dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
-      dot.addEventListener('click', () => showSlide(idx));
+      dot.addEventListener('click', () => {
+        showSlide(idx);
+        restartTimer();
+      });
       dotsWrap.appendChild(dot);
     });
 
@@ -233,16 +272,28 @@ src="https://www.facebook.com/tr?id=912570121617717&ev=PageView&noscript=1"
     function showSlide(index) {
       slides[slideIndex].classList.remove('active');
       dots[slideIndex].classList.remove('active');
+      thumbs[slideIndex].classList.remove('active');
       slideIndex = index;
       slides[slideIndex].classList.add('active');
       dots[slideIndex].classList.add('active');
+      thumbs[slideIndex].classList.add('active');
     }
 
-    if (slides.length > 1) {
-      setInterval(() => {
+    thumbs.forEach((thumb, idx) => {
+      thumb.addEventListener('click', () => {
+        showSlide(idx);
+        restartTimer();
+      });
+    });
+
+    function restartTimer() {
+      if (slideTimer) clearInterval(slideTimer);
+      slideTimer = setInterval(() => {
         showSlide((slideIndex + 1) % slides.length);
       }, 3200);
     }
+
+    if (slides.length > 1) restartTimer();
   </script>
 </body>
 </html>
